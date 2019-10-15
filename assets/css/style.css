@@ -11,45 +11,40 @@ body {
     font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-header {
-    border-bottom: solid #cccccc 1px;
-    margin: 0;
-    font-family: 'Georgia', Times, Times New Roman, serif;
-    background-color: white;
-}
-
 .name {
+    text-align: center;
     background-color: #4aaaa5;
-    font-size: 30px;
-    padding: 30px 10px 30px 10px;
-    float: left;
-    margin-left: 150px;
+    font-family: 'Georgia', Times, Times New Roman, serif;
     color: white;
+    font-size: 35px;
+    padding: 10px 30px 10px 30px;
 }
 
 nav {
-    float: right;
-    padding: 20px;
-    margin-top: 15px;
-    margin-right: 50px;
-    font-size: 20px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 nav a {
-    padding: 10px;
     text-decoration: none;
-    color: rgb(56, 168, 153);
+    color: #4aaaa5;
+    padding: 10px;
 }
 
-nav a:hover {
-    color: rgb(49, 80, 76);
+header {
+    border-bottom: solid #cccccc 1px;
+    background-color: white;
+    font-family: 'Georgia', Times, Times New Roman, serif;
 }
 
 .main-content {
     background-color: #ffffff;
     border: solid #dddddd 1px;
-    margin: 50px 240px 100px 240px;
+    margin: 50px 40px 100px 40px;
     padding: 10px;
+    max-width: 666px;
 }
 
 h1 {
@@ -59,10 +54,9 @@ h1 {
 }
 
 .profile {
-    height: 20%;
-    width: 20%;
-    float: left;
-    margin-right: 15px;
+    width: 100%;
+    max-width: 768px;
+    margin: 0px 20px 10px 0px;
 }
 
 .content {
@@ -71,6 +65,26 @@ h1 {
 
 p {
     margin-top: 0px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .name{
+        float:left;
+        padding:10px;
+        margin-left: 50px;
+        padding: 10px 30px 10px 30px;
+    }
+
+    nav {
+        float: right;
+    }
+
+    .profile {
+        float: left;
+    }
+    
 }
 
 /* ------------- Footer -------------  */
@@ -109,7 +123,7 @@ footer {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 50px;
+    grid-gap: 80px;
     align-items: stretch;
 }
 
@@ -120,6 +134,7 @@ footer {
 .grid {
     position: relative;
     margin: 1em;
+    max-width: 768px;
 }
 
 .parent {
